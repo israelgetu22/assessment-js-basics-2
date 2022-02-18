@@ -119,6 +119,11 @@ const deals = [
 */
 
 //CODE HERE
+ 
+    const newdeals = deals.replace(15,10){
+        console.log (newdeals)
+    }
+
 
 /*
     The restaurant is going to continue its
@@ -134,3 +139,6 @@ const deals = [
 */
 
 //CODE HERE
+
+const familyDeal = deals.replace(March,April).trim
+console.log(familyDeal)
