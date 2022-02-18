@@ -36,7 +36,7 @@ let pizza = {
   category: "Grains",
   popularity: "1",
   rating: "4",
-  tags: "gluten-free",
+  tags: ["gluten-free", "kid"],
 };
 
 console.log(pizza);
@@ -51,6 +51,8 @@ console.log(pizza);
 
 //CODE HERE
 
+console.log(pizza.popularity);
+
 /*
     Second, log the second tag in your pizza's
     tags array.
@@ -59,7 +61,8 @@ console.log(pizza);
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
+console.log(pizza["tags[1]"]);
 /*
     Third, destructure the price off of the
     pizza object.
@@ -68,15 +71,20 @@ console.log(pizza);
 */
 
 //CODE HERE
+let { price } = pizza;
+console.log(`the new price is ${price}`);
 
 /*
     Fourth, and last, destructure the category
     property.
 
     Print the value of your category variable. 
+
 */
 
 //CODE HERE
+let { popularity } = pizza;
+console.log(`${popularity}`);
 
 //////////////////PROBLEM 3////////////////////
 /* 
