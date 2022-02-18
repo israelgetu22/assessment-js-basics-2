@@ -100,6 +100,17 @@ console.log(`${popularity}`);
 
 //CODE HERE
 
+let foodArr = [
+  {
+    name: "Chicago",
+    price: 17,
+    category: "Milk",
+    popularity: "3",
+    rating: "6",
+    tags: ["gluten", "free salt"],
+  },
+];
+
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
