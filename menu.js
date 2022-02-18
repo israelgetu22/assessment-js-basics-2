@@ -124,8 +124,11 @@ let foodArr = [
 */
 
 //CODE HERE
+const onlyFood = () => console.log(foodArr);
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(callback);
+
+onlyFood(callback);
 
 //////////////////PROBLEM 5////////////////////
 /* 
