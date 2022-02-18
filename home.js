@@ -50,6 +50,17 @@ greetUser("Andrew");
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 //CODE HERE
+function canWeDeliver(zipCode) {
+  for (let i = 0; i < zipCode.length; i++) {
+    if (zipCode[i] !== deliveryAreaZipCodes[i]) {
+      console.log("Sorry, we can't deliver to that address");
+    } else {
+      console.log("You're in our delivery zone!");
+    }
+  }
+}
+
+canWeDeliver(deliveryAreaZipCodes);
 
 /* 
     Problem 2 Continued
@@ -69,6 +80,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 */
 
 // CODE HERE
+function canWeDeliverTwo() {
+  console.log(deliveryAreaZipCodes.includes(85204));
+}
+//output true
 
 //////////////////PROBLEM 3////////////////////
 /* 
