@@ -21,7 +21,16 @@
 
 //CODE HERE
 
+class Employee {
+  constructor(name, shifts) {
+    (this.name = name), (this.shifts = shifts);
+  }
 
+  getSchedule() {
+    console.log(` ${this.name} works on ${this.shifts} Where ${this.name} and ${this.shifts} reference the
+         values stored on the object.`);
+  }
+}
 
 /*
     Create a new instance of your class.
@@ -35,6 +44,9 @@
 
 //CODE HERE
 
+const empOne = new Employee("Jess", "weekday mornings");
+console.log(empOne);
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
@@ -42,6 +54,7 @@
 
 //CODE HERE
 
+getSchedule(empOne);
 
 /*
     Make a copy of the empOne object
@@ -57,7 +70,8 @@
 
 //CODE HERE
 
-
+const empTwo = { ...empOne };
+const Nick = { ...empOne };
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -84,8 +98,6 @@
 
 //CODE HERE
 
-
-
 /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
@@ -98,7 +110,6 @@
 */
 
 //CODE HERE
-
 
 /*
     Call the `getEmployees` method on the
@@ -113,7 +124,7 @@
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+//CODE HERE
 
 /*
     Call the `getEmployees` method on the
