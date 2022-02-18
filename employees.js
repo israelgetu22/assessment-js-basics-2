@@ -98,6 +98,24 @@ const Nick = { ...empOne };
 
 //CODE HERE
 
+class Manager extends Employee {
+  constructor(name, shifts, employees) {
+    super(name, shifts);
+
+    this.employees = employees;
+  }
+  addEmployee() {
+    console.log(
+      `${this.name} manages ${this.employees} Where NAME and EMPLOYEES reference the values stored on the object.`
+    );
+  }
+
+  addEmployee(emp) {
+    employees.push();
+  }
+}
+const employees = [];
+
 /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
