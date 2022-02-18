@@ -100,9 +100,41 @@ console.log(`${popularity}`);
 
 //CODE HERE
 
-let foodArr = [
+var foodArr = [
   {
     name: "Chicago",
+    price: 17,
+    category: "Milk",
+    popularity: "3",
+    rating: "6",
+    tags: ["gluten", "free salt"],
+  },
+  {
+    name: "Texas",
+    price: 18,
+    category: "Milk Cheese",
+    popularity: "4",
+    rating: "6",
+    tags: ["gluten", "free salt"],
+  },
+  {
+    name: "Ethiopa",
+    price: 13,
+    category: "Cheess",
+    popularity: "2",
+    rating: "6",
+    tags: ["gluten", "free salt"],
+  },
+  {
+    name: "Hello",
+    price: 22,
+    category: "Milk free",
+    popularity: "3",
+    rating: "6",
+    tags: ["gluten", "free salt"],
+  },
+  {
+    name: "Hot",
     price: 17,
     category: "Milk",
     popularity: "3",
@@ -170,6 +202,20 @@ onlyFood(callback);
 */
 
 //CODE HERE
+
+function filterByProperty(property,number,type)     //rating,popularity,price 
+{
+     if (type > ){
+
+     }else if{
+         
+     }else {
+
+     }
+
+}
+    
+
 
 /*
     Invoke the `filterByProperty` function passing
