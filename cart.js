@@ -89,5 +89,13 @@ console.log(calcFinaPrice(15, 3, 0.05));
     Now, create a customer object following your own
     guidelines.
 */
-
 //CODE HERE
+
+const customer = {
+  firstname: "Israel", //String data type,  it contain letters
+  lastname: "Getu", //String data type,  it contain letters
+  phone: 1234567890, //Number data type,  it contain numbers
+  address: "Texas", //String data type,  it contain letters
+};
+
+console.log(customer);
