@@ -129,6 +129,8 @@ const employees = [];
 
 //CODE HERE
 
+
+const manager = new Manager("Winstonweekday","afternoons","Schmidt")
 /*
     Call the `getEmployees` method on the
     `manager` object.  
@@ -144,6 +146,10 @@ const employees = [];
 
 //CODE HERE
 
+addEmployee(){
+    
+}
+
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -151,3 +157,7 @@ const employees = [];
 */
 
 //CODE HERE
+
+getEmployees(){
+
+}

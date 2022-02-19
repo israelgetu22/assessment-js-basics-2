@@ -34,10 +34,7 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce(cb);
-console.log(cb);
-
-sum();
+const summedPrice = cart.reduce((acc, curr) => acc + curr, 0);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,6 +52,13 @@ sum();
 */
 
 //CODE HERE
+
+const calcFinaPrice = (cartTotal, couponValue, tax) => {
+  let finalPrice = cartTotal + cartTotal * tax - couponValue;
+  return finalPrice;
+};
+
+console.log(calcFinaPrice(15, 3, 0.05));
 
 //////////////////PROBLEM 3////////////////////
 /*  

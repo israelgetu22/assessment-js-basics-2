@@ -120,10 +120,13 @@ const deals = [
 
 //CODE HERE
  
-    const newdeals = deals.replace(15,10){
-        console.log (newdeals)
-    }
+    // const newdeals = deals.replace(15,10){
+    //     console.log (newdeals)
+    // }
 
+    deals[0].title = deals[0].title.replace(15,10)
+     console.log(deals[0]['title'])
+ 
 
 /*
     The restaurant is going to continue its

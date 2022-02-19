@@ -34,8 +34,8 @@ let pizza = {
   name: "Neapolitan",
   price: 12,
   category: "Grains",
-  popularity: "1",
-  rating: "4",
+  popularity: 1,
+  rating: 4,
   tags: ["gluten-free", "kid"],
 };
 
@@ -62,7 +62,7 @@ console.log(pizza.popularity);
 
 //CODE HERE
 console.log(pizza.tags[1]);
-console.log(pizza["tags[1]"]);
+
 /*
     Third, destructure the price off of the
     pizza object.
@@ -72,7 +72,7 @@ console.log(pizza["tags[1]"]);
 
 //CODE HERE
 let { price } = pizza;
-console.log(`the new price is ${price}`);
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -83,8 +83,8 @@ console.log(`the new price is ${price}`);
 */
 
 //CODE HERE
-let { popularity } = pizza;
-console.log(`${popularity}`);
+let { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -102,44 +102,44 @@ console.log(`${popularity}`);
 
 var foodArr = [
   {
-    name: "Chicago",
+    name: "Chicago Pizza",
     price: 17,
     category: "Milk",
-    popularity: "3",
-    rating: "6",
+    popularity: 3,
+    rating: 6,
     tags: ["gluten", "free salt"],
   },
   {
-    name: "Texas",
+    name: "Texas Pizza ",
     price: 18,
     category: "Milk Cheese",
-    popularity: "4",
-    rating: "6",
+    popularity: 4,
+    rating: 5.6,
     tags: ["gluten", "free salt"],
   },
   {
-    name: "Ethiopa",
+    name: "Ethiopa Pizza",
     price: 13,
     category: "Cheess",
-    popularity: "2",
-    rating: "6",
-    tags: ["gluten", "free salt"],
+    popularity: 2,
+    rating: 4.2,
+    tags: ["gluten", "Margheritat"],
   },
   {
-    name: "Hello",
+    name: "Buffalo Pizza",
     price: 22,
     category: "Milk free",
-    popularity: "3",
-    rating: "6",
+    popularity: 7,
+    rating: 6,
     tags: ["gluten", "free salt"],
   },
   {
-    name: "Hot",
+    name: "Hot Pizza",
     price: 17,
-    category: "Milk",
-    popularity: "3",
-    rating: "6",
-    tags: ["gluten", "free salt"],
+    category: "Almod",
+    popularity: 3,
+    rating: 3,
+    tags: ["gluten", "Veggie  "],
   },
 ];
 
@@ -156,11 +156,14 @@ var foodArr = [
 */
 
 //CODE HERE
-const onlyFood = () => console.log(foodArr);
 
-const filteredFood = foodArr.filter(callback);
+const filterFood = foodArr.filter(function (item) {
+  console.log(item.tags[1] === "free salt");
+  console.log(item.tags[0] === "gluten");
+});
 
-onlyFood(callback);
+// const filteredFood = foodArr.filter((item) => item.tags[0] === "kids");
+// console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -203,19 +206,23 @@ onlyFood(callback);
 
 //CODE HERE
 
-function filterByProperty(property,number,type)     //rating,popularity,price 
-{
-     if (type > ){
-
-     }else if{
-         
-     }else {
-
-     }
-
-}
-    
-
+const filterByProperty = (property, number, type) => {
+  let filteredArr;
+  if (property === "price" && type === "above") {
+    filteredArr = foodArr.filter((product) => product.price > number);
+  } else if (property === "price" && type === "below") {
+    filteredArr = foodArr.filter((product) => product.price < number);
+  } else if (property === "rating" && type === "above") {
+    filteredArr = foodArr.filter((product) => product.rating > number);
+  } else if (property === "rating" && type === "below") {
+    filteredArr = foodArr.filter((product) => product.rating < number);
+  } else if (property === "popularity" && type === "above") {
+    filteredArr = foodArr.filter((product) => product.popularity > number);
+  } else if (property === "popularity" && type === "below") {
+    filteredArr = foodArr.filter((product) => product.popularity < number);
+  }
+  return filteredArr;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -225,3 +232,5 @@ function filterByProperty(property,number,type)     //rating,popularity,price
 */
 
 //CODE HERE
+
+console.log(filterByProperty("popularity", 3, "above"));
