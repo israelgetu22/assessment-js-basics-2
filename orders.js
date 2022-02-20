@@ -35,14 +35,13 @@ class Ticket {
       this.items = items;
       this.orderTime = orderTime;
       this.customerId= customerId;
-      this.status = queued;
   }
 }
 
 updateStatus(newStatus){
-    console.log('The order for customer ', this.customerId, ' is now ', this.status)
-
-}
+    this.newStatus = newStatus;
+    console.log(`The order for customer ${this.customerId}, is now ${this.newstatus}`)
+};
 
 /*
     Create a new instance of your class.
@@ -67,6 +66,5 @@ console.log(firstTicket)
 */
 
 //CODE HERE
-updateStatus(){
-    firstTicket("cooking")
-}
+
+    firstTicket.updateStatus("cooking");
