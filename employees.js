@@ -25,13 +25,14 @@ class Employee {
   constructor(name, shifts) {
     (this.name = name), (this.shifts = shifts);
   }
-
-  getSchedule() {
-    console.log(` ${this.name} works on ${this.shifts} Where ${this.name} and ${this.shifts} reference the
-         values stored on the object.`);
-  }
 }
 
+function getSchedule(name, shifts) {
+  let check = new Employee(name, shifts);
+  console.log(check);
+}
+
+getSchedule("Israel", "evening");
 /*
     Create a new instance of your class.
     Save it to a variable called `empOne`.
@@ -44,7 +45,7 @@ class Employee {
 
 //CODE HERE
 
-const empOne = new Employee("Jess", "weekday mornings");
+const empOne = new Employee("Jess", "mornings");
 console.log(empOne);
 
 /*
@@ -54,7 +55,7 @@ console.log(empOne);
 
 //CODE HERE
 
-getSchedule(empOne);
+getSchedule(empOne.name, empOne.shifts);
 
 /*
     Make a copy of the empOne object
@@ -71,7 +72,8 @@ getSchedule(empOne);
 //CODE HERE
 
 const empTwo = { ...empOne };
-const Nick = { ...empOne };
+
+console.log(empTwo);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -101,20 +103,19 @@ const Nick = { ...empOne };
 class Manager extends Employee {
   constructor(name, shifts, employees) {
     super(name, shifts);
+    const employees = [];
 
     this.employees = employees;
   }
-  addEmployee() {
-    console.log(
-      `${this.name} manages ${this.employees} Where NAME and EMPLOYEES reference the values stored on the object.`
-    );
-  }
 
-  addEmployee(emp) {
-    employees.push();
-  }
+  addEmployee = (emp) => {
+    this.employees.push(emp);
+  };
+
+  getEmployee = () => {
+    return this.employees;
+  };
 }
-const employees = [];
 
 /*
     Create a new instance of your class.
@@ -129,27 +130,22 @@ const employees = [];
 
 //CODE HERE
 
-
-const manager = new Manager("Winstonweekday","afternoons","Schmidt")
+const manager = new Manager("Winston", "afternoons");
+manager.getEmployee("Cece");
+manager.getEmployee("Schmidt");
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
-//CODE HERE
-
+console.log(manager.getEmployee());
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE
-
-addEmployee(){
-    
-}
-
+manager.addEmployee("Israel");
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -157,7 +153,4 @@ addEmployee(){
 */
 
 //CODE HERE
-
-getEmployees(){
-
-}
+console.log(manager.getEmployee());
