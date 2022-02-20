@@ -22,7 +22,7 @@
 
 //CODE HERE
 const greetUser = (username) => {
-  console.log(`Welcome back,  ${username}`);
+  return `Welcome back,  ${username}`;
 };
 
 greetUser("Andrew");
@@ -119,14 +119,15 @@ const deals = [
 */
 
 //CODE HERE
- 
-    // const newdeals = deals.replace(15,10){
-    //     console.log (newdeals)
-    // }
 
-    deals[0].title = deals[0].title.replace(15,10)
-     console.log(deals[0]['title'])
- 
+// deals[0].title = deals[0].title.replace(15,10)
+//  console.log(deals[0]['title'])
+
+deals.forEach((item, index) => {
+  if (item.title === "15% OFF") {
+    deals[index].title = "10% OFF";
+  }
+});
 
 /*
     The restaurant is going to continue its
@@ -142,6 +143,11 @@ const deals = [
 */
 
 //CODE HERE
-
-const familyDeal = deals.replace(March,April).trim
-console.log(familyDeal)
+const getTitle = deals[1].desc.trim().split(" ");
+getTitle.forEach((_, index) => {
+  if (getTitle[index] === "March!") {
+    getTitle[index] === "April!";
+  }
+});
+const newDesc = getTitle.join(" ");
+deals[1].desc = newDesc;
